@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export class AddTodo extends Component {
   state = {
@@ -30,11 +31,16 @@ export class AddTodo extends Component {
         value="Submit"
         className="btn"
         style={{ flex: '1' }}
-
         />
       </form>
     )
   }
+}
+
+
+// PropTypes
+AddTodo.propTypes = {
+  addTodo: PropTypes.func.isRequired,
 }
 
 export default AddTodo;
